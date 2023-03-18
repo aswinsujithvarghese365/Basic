@@ -10,3 +10,15 @@ The next line contains N space-separated integers — A1, A2, A3,....., n, which
 Output Format
 For each test case, output on a new line the minimum number of elements that she has to remove from the array."""
 
+# cook your dish here
+T = int(input())
+for i in range(T):
+    ele = int(input())
+    e1 = [int(x) for x in input().split()]
+    mul = 1
+    for j in range(len(e1)):
+        mul = mul*e1[j]
+    if(mul<0):
+        print(1)
+    else:
+        print(0)
