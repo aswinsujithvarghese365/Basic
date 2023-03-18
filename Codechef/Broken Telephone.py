@@ -20,3 +20,17 @@ The second line contains N space-separated integers A1, A2, ..., AN denoting the
 Output
 For each test case, output a single line containing an integer corresponding to the number of players that could mishear the message or whisper it wrongly."""
 
+# cook your dish here
+T = int(input())
+for i in range(T):
+    ele = int(input())
+    l = [int(x) for x in input().split()]
+    temp = l[0]
+    k=0
+    for j in range(ele-1):
+        if(l[j]!=l[j+1] or l[j]!=temp):
+            k+=1
+            temp = l[j]
+    if(l[-1]!=temp):
+        k+=1
+    print(k)
