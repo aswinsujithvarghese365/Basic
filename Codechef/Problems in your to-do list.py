@@ -23,3 +23,13 @@ Output Format
 For each test case, output in a single line the number of problems that Chef will have to remove so that all remaining problems have a 
 difficulty rating strictly less than 1000."""
 
+# cook your dish here
+T=int(input())
+for i in range(T):
+    ele = int(input())
+    con = [int(x) for x in input().split()]
+    k = 0
+    for j in range(ele):
+        if(con[j]>=1000):
+            k+=1
+    print(k)
