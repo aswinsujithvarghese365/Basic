@@ -14,3 +14,16 @@ Next line contains N space-separated integers A1, A2, A3, ......, An - denoting 
 Output Format
 For each test case, output the minimum number of operations required to make parity of all elements same."""
 
+# cook your dish here
+T = int(input())
+for i in range(T):
+    ele = int(input())
+    l = [int(x) for x in input().split()]
+    p = 0
+    for j in range(ele):
+        if(l[j]%2==0):
+            p+=1
+    if(p==0 or p==ele):
+        print(0)
+    else:
+        print(p)
