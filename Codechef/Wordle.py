@@ -16,3 +16,15 @@ For each test case, print the value of string M.
 
 You may print each character of the string in uppercase or lowercase (for example, the strings 
 BgBgB, BGBGB, bgbGB and bgbgb will all be treated as identical)."""
+
+# cook your dish here
+T=int(input())
+for i in range(T):
+    l1=str(input())
+    l2=str(input()) 
+    for j in range(len(l1)):
+        if(l1[j]==l2[j]):
+            print("G",end="")
+        else:
+            print("B",end="")
+    print("\n")
