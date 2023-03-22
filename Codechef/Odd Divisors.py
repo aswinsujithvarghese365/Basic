@@ -15,3 +15,24 @@ The only line of the test case description contains two positive integers l and 
 Output
 For each test case, output the required sum on a separate line."""
 
+# cook your dish here
+import math
+
+def f(n):
+    result = 0
+    for i in range(1, int(math.sqrt(n)) + 1):
+        if n % i == 0:
+            if i % 2 == 1:
+                result += i
+            if n // i % 2 == 1 and n // i != i:
+                result += n // i
+    return result
+
+t = int(input())
+
+for _ in range(t):
+    l, r = map(int, input().split())
+    result = 0
+    for i in range(l, r+1):
+        result += f(i)
+    print(result)
