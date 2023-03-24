@@ -14,3 +14,12 @@ The second line of each test case contains a binary string S of length N contain
 Output Format
 For each test case, output on a new line the minimum number of operations Chef needs to 
 perform so that no two consecutive characters are same in S."""
+
+for t in range(int(input())):
+    c = 0
+    n = int(input())
+    S = input()
+    for i in range(n - 1):
+        if S[i] == S[i+1]:
+            c+=1
+    print(c)
