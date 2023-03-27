@@ -15,3 +15,18 @@ For each test case output "PASS" if Chef passes the exam and "FAIL" if Chef fail
 You may print each character of the string in uppercase or lowercase (for example, the strings "pASs", 
 "pass", "Pass" and "PASS" will all be treated as identical). */
 
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	int N, X, P;
+	int total;
+	cin>>n;
+	for(int i = 0; i < n; i++){
+	    cin>>N>>X>>P;
+	    total = (X*3) - (N-X);
+	    (total>=P) ? cout<<"PASS"<<"\n" : cout<<"FAIL"<<"\n";
+	}
+	return 0;
+}
