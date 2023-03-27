@@ -19,3 +19,24 @@ X,Y,A, and B respectively.
 Output Format
 For each testcase, print a single line containing one integer — the maximum number of gold medals that Chef can win. */
 
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	int X, Y, A, B;
+	int medals = 0;
+	cin>>n;
+	for(int i = 0; i < n; i++){
+	    cin>>X>>Y>>A>>B;
+	    if(X!=A && X!=B){
+	        medals++;
+	    }
+	    if(Y!=A && Y!=B){
+	        medals++;
+	    }
+	    cout<<medals<<"\n";
+	    medals = 0;
+	}
+	return 0;
+}
