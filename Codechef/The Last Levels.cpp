@@ -13,3 +13,19 @@ The first and only line of input will contain three space-separated integers X, 
 Output Format
 For each test case, output on a new line the answer — the length of Chef's gaming session. */
 
+#include <iostream>
+using namespace std;
+
+int main() {
+	int n;
+	int x, y, z;
+	int total_time;
+	cin>>n;
+	for(int i = 0; i < n; i++){
+	    cin>>x>>y>>z;
+	    (x%3 == 0) ? total_time = ((x/3)-1)*z : total_time = (x/3)*z;
+	    total_time += (x*y);
+	    cout<<total_time<<"\n";
+	}
+	return 0;
+}
