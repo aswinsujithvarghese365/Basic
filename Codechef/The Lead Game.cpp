@@ -28,3 +28,26 @@ Output
 Your output must consist of a single line containing two integers W and L, where W is 1 or 2 
 and indicates the winner and L is the maximum lead attained by the winner. */
 
+#include <bits/stdc++.h>
+using namespace std;
+int main() 
+{	
+	int numb;
+	cin>>numb;
+        int sg1=0,sg2=0;
+        int W=0;  
+        int L=0;  
+	while(numb--){
+	    int ply1,ply2;  
+	    cin>>ply1>>ply2;
+	    sg1+=ply1;    
+	    sg2+=ply2;    
+	    int l=abs(sg1-sg2) ;  
+	    if(l>L){
+	        L=l;  
+	        sg1>sg2? W=1:W=2; 
+	    }
+	}
+	cout<<W<<" "<<L<<endl;
+	return 0;
+}
